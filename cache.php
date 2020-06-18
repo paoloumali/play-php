@@ -9,7 +9,7 @@ if ($cached_day != $current_day) {
     setcookie('c_last_visit_day', $current_day, time()+60*60*24, '/cache.php', 'play-php.paoloumali.com', true);
 }
 
-echo $cached_day;
-echo $current_day;
+echo 'cached_day:'.$cached_day;
+echo 'current_day:'.$current_day;
 
 echo 'test cache';
