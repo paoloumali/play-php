@@ -14,14 +14,12 @@ if ($cookied_day != $current_day) {
     setcookie('c_last_visit_day', $current_day, $cookie_expires, $cookie_path, $cookie_domain);
 }
 
-$date = date('Y/m/d h:i:sa');
 $last_visit_day = empty($cookied_day)
     ? explode('-', $current_day)[1]
     : explode('-', $_COOKIE["c_last_visit_day"])[1];
 
 $html = <<<EOT
 <pre>
-date: $date
 cookied_day: $cookied_day
 current_day: $current_day
 last visit day: $last_visit_day
