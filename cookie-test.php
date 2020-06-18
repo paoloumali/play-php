@@ -15,7 +15,6 @@ if ($cookied_day != $current_day) {
 }
 
 $date = date('Y/m/d h:i:sa');
-echo '$_COOKIE["c_last_visit_day"]:'.$_COOKIE["c_last_visit_day"]."\n";
 $last_visit_day = empty($cookied_day)
     ? explode('-', $current_day)[1]
     : explode('-', $_COOKIE["c_last_visit_day"])[1];
